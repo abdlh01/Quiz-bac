@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bac Quiz - Your Challenge!</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="background"></canvas>
+  <main>
+    <h1><span>Bac Quiz,</span><br><span>your challenge!</span></h1>
+    <p class="intro">الكويز يساعدك على التهيئة المثلى لاجتياز شهادة البكالوريا بثقة.</p>
+    <h2 class="select-title">اختر إحدى المواد</h2>
+    <div class="subjects">
+      <div class="subject" onclick="startQuiz('fr')">
+        <img src="https://cdn-icons-png.flaticon.com/512/197/197560.png" alt="Français">
+        <p>اللغة الفرنسية<br><span>جميع الشعب</span></p>
+      </div>
+      <div class="subject" onclick="startQuiz('en')">
+        <img src="https://cdn-icons-png.flaticon.com/512/197/197374.png" alt="English">
+        <p>اللغة الإنجليزية<br><span>جميع الشعب</span></p>
+      </div>
+    </div>
+    <p class="coming-soon">سيتم إضافة باقي المواد قريباً</p>
+    <div class="telegram">
+      <a href="https://t.me/yourchannel" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
+        <span>انضم إلى قناتنا على تيليغرام</span>
+      </a>
+    </div>
+  </main>
+
+  <div id="quizModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeQuiz()">&times;</span>
+      <h2 id="quiz-title">Quiz</h2>
+      <div id="quiz-container"></div>
+      <p id="quiz-result"></p>
+      <button id="restart-btn" onclick="restartQuiz()">لعب مرة أخرى</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Askeladd. All Rights Reserved</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
