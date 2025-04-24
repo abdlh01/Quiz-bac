@@ -23,8 +23,6 @@ canvas#background {
 main { 
   text-align: center; 
   padding: 2rem; 
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 h1 { 
@@ -119,131 +117,70 @@ footer {
   font-size: 0.8rem; 
   color: #aaa; 
   text-align: center; 
-  padding: 1rem;
 }
 
-/* أنماط النافذة المعدلة */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
-  background-color: rgba(0,0,0,0.8);
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 60px;
+.modal { 
+  display: none; 
+  position: fixed; 
+  z-index: 10; 
+  left: 0; 
+  top: 0; 
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.8); 
 }
 
-.modal-content {
-  background-color: #121212;
-  margin: 0 auto;
-  padding: 25px;
-  border-radius: 12px;
-  width: 90%;
-  max-width: 550px;
-  box-shadow: 0 0 25px rgba(0, 191, 255, 0.6);
-  text-align: center;
-  position: relative;
-  animation: modalDrop 0.4s ease-out;
+.modal-content { 
+  background-color: #121212; 
+  margin: 10% auto; 
+  padding: 20px; 
+  border-radius: 10px; 
+  width: 80%; 
+  max-width: 500px; 
+  box-shadow: 0 0 30px #00bfff99; 
+  text-align: center; 
 }
 
-@keyframes modalDrop {
-  from {
-    opacity: 0;
-    transform: translateY(-60px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.close { 
+  float: right; 
+  font-size: 28px; 
+  font-weight: bold; 
+  cursor: pointer; 
 }
 
-.close {
-  position: absolute;
-  top: 12px;
-  right: 20px;
-  font-size: 30px;
-  font-weight: bold;
-  color: #fff;
-  cursor: pointer;
-  transition: 0.3s;
+button { 
+  background-color: #00bfff; 
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 1rem; 
+  margin-top: 20px; 
+  border-radius: 10px; 
+  cursor: pointer; 
 }
 
-.close:hover {
-  color: #00bfff;
+button:hover { 
+  background-color: #0099cc; 
 }
 
-button {
-  background-color: #00bfff;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 1rem;
-  margin-top: 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
+.option { 
+  background-color: #222; 
+  margin: 0.5rem 0; 
+  padding: 0.8rem; 
+  border-radius: 8px; 
+  cursor: pointer; 
+  transition: 0.3s; 
 }
 
-button:hover {
-  background-color: #0099cc;
-  transform: translateY(-2px);
+.option:hover { 
+  background-color: #00bfff55; 
 }
 
-.option {
-  background-color: #222;
-  margin: 0.8rem 0;
-  padding: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-  font-size: 1rem;
+.option.correct { 
+  background-color: #2ecc71; 
 }
 
-.option:hover {
-  background-color: #00bfff55;
-}
-
-.option.correct {
-  background-color: #2ecc71;
-}
-
-.option.wrong {
-  background-color: #e74c3c;
-}
-
-/* تحسينات للهواتف */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2.2rem;
-  }
-  
-  .modal {
-    padding-top: 30px;
-  }
-  
-  .modal-content {
-    width: 95%;
-    padding: 20px;
-  }
-  
-  .close {
-    top: 8px;
-    right: 15px;
-    font-size: 26px;
-  }
-  
-  .subjects {
-    gap: 1.5rem;
-  }
-  
-  .subject {
-    width: 140px;
-    padding: 0.8rem;
-  }
+.option.wrong { 
+  background-color: #e74c3c; 
 }
